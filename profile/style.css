@@ -1,0 +1,364 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+p {
+  margin: 0 0 12px 0;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+/*----------------------------------------------
+    HEADER
+----------------------------------------------*/
+.header {
+  background-color: white;
+}
+
+.header .header-background {
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 0 0 8px 8px;
+  height: 350px;
+}
+
+.header .header-profile {
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+  border: 4px solid white;
+  top: 60px;
+  position: relative;
+}
+
+.header .header-profile > img {
+  width: 100%;
+}
+
+.header .header-info {
+  text-align: center;
+  padding: 70px 0 20px;
+}
+
+.header .header-info h1 {
+  margin-bottom: 5px;
+}
+
+.header .header-info p {
+  color: var(--color-secondary);
+}
+
+.header .header-navigation ul {
+  display: flex;
+  justify-content: center;
+}
+
+.header .header-navigation a {
+  padding: 10px 15px 13px;
+  margin: 0 8px;
+  display: inline-block;
+  color: var(--color-secondary);
+  font-weight: bold;
+  position: relative;
+  transition: color 300ms ease-in-out;
+}
+
+.header .header-navigation a::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: transparent;
+  transition: background-color 300ms ease-in-out;
+}
+
+.header .header-navigation .active::after {
+  background-color: var(--color-blue);
+}
+
+.header .header-navigation .active {
+  color: var(--color-blue);
+}
+
+.header .header-navigation a:hover::after {
+  background-color: var(--color-blue) 80;
+}
+
+.header .header-navigation a:hover {
+  color: var(--color-blue) 80;
+}
+/*----------------------------------------------
+    MAIN
+----------------------------------------------*/
+.main {
+  background-color: #f0f2f5;
+  padding: 20px;
+  @media (min-width: 992px) {
+    padding: 20px 0;
+  }
+}
+
+/*==================================
+    TIMELINE
+==================================*/
+/*-- GENERAL STYLES
+------------------------------*/
+.timeline {
+  line-height: 1.4em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.timeline h1,
+.timeline h2,
+.timeline h3,
+.timeline h4,
+.timeline h5,
+.timeline h6 {
+  line-height: inherit;
+}
+
+/*----- TIMELINE ITEM -----*/
+.timeline-item {
+  padding-left: 40px;
+  position: relative;
+}
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+/*----- TIMELINE INFO -----*/
+.timeline-info {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 0 0 0.5em 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/*----- TIMELINE MARKER -----*/
+.timeline-marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15px;
+}
+.timeline-marker:before {
+  background: var(--color-blue);
+  border: 3px solid transparent;
+  border-radius: 100%;
+  content: "";
+  display: block;
+  height: 15px;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 15px;
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+.timeline-marker:after {
+  content: "";
+  width: 3px;
+  background: #ccd5db;
+  display: block;
+  position: absolute;
+  top: 24px;
+  bottom: 0;
+  left: 6px;
+}
+.timeline-item:last-child .timeline-marker:after {
+  content: none;
+}
+
+/*----- TIMELINE CONTENT -----*/
+
+.timeline-content {
+  padding-bottom: 40px;
+}
+.timeline-content p:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-content .timeline-wrapper {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.timeline-content .timeline-wrapper .timeline-title {
+  margin: 0 0 15px 0;
+}
+
+.timeline-content .timeline-wrapper p {
+  font-size: 15px;
+}
+/*----- TIMELINE EVENT -----*/
+
+.timeline-wrapper.timeline-event {
+  text-align: center;
+}
+
+.timeline-wrapper.timeline-event p {
+  color: var(--color-secondary);
+  font-size: 14px;
+}
+
+.timeline-wrapper.timeline-event figure {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-blue);
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.timeline-wrapper.timeline-event figure > svg {
+  width: 25px;
+  height: auto;
+  height: auto;
+  fill: white;
+}
+
+/*----- TIMELINE IMAGE -----*/
+.timeline-wrapper.timeline-image {
+  padding: 0;
+}
+
+.timeline-wrapper.timeline-image figure img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.timeline-wrapper.timeline-image figure + div {
+  padding: 15px;
+}
+
+/*----- TIMELINE PERIOD -----*/
+.period {
+  padding: 0;
+}
+.period .timeline-info {
+  display: none;
+}
+.period .timeline-marker:before {
+  background: transparent;
+  content: "";
+  width: 15px;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  top: 0;
+  bottom: 30px;
+  position: absolute;
+  border-top: 3px solid #ccd5db;
+  border-bottom: 3px solid #ccd5db;
+}
+.period .timeline-marker:after {
+  content: "";
+  height: 32px;
+  top: auto;
+}
+.period .timeline-content {
+  padding: 40px 0 70px;
+}
+.period .timeline-title {
+  margin: 0;
+}
+
+/*----------------------------------------------
+    MOD: TIMELINE CENTERED
+----------------------------------------------*/
+@media (min-width: 992px) {
+  .timeline,
+  .timeline .timeline-item,
+  .timeline .timeline-info,
+  .timeline .timeline-marker,
+  .timeline .timeline-content {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .timeline .timeline-item {
+    padding-bottom: 40px;
+    overflow: hidden;
+  }
+  .timeline .timeline-marker {
+    position: absolute;
+    left: 50%;
+    margin-left: -7.5px;
+  }
+  .timeline .timeline-info,
+  .timeline .timeline-content {
+    width: 50%;
+  }
+  .timeline > .timeline-item:nth-child(odd) .timeline-info {
+    float: left;
+    text-align: right;
+    padding-right: 30px;
+  }
+  .timeline > .timeline-item:nth-child(odd) .timeline-content {
+    float: right;
+    text-align: left;
+    padding-left: 30px;
+  }
+  .timeline > .timeline-item:nth-child(even) .timeline-info {
+    float: right;
+    text-align: left;
+    padding-left: 30px;
+  }
+  .timeline > .timeline-item:nth-child(even) .timeline-content {
+    float: left;
+    text-align: right;
+    padding-right: 30px;
+  }
+  .timeline > .timeline-item.period .timeline-content {
+    float: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .timeline .timeline-item.period {
+    padding: 50px 0 90px;
+  }
+  .timeline .period .timeline-marker:after {
+    height: 30px;
+    bottom: 0;
+    top: auto;
+  }
+  .timeline .period .timeline-title {
+    left: auto;
+  }
+}
+
+/*----------------------------------------------
+    MOD: MARKER OUTLINE
+----------------------------------------------*/
+.marker-outline .timeline-marker:before {
+  background: transparent;
+  border-color: var(--color-blue);
+}

@@ -1,0 +1,53 @@
+:root {
+  --font-color: #1c1e21;
+  --color-blue: #1876f2;
+  --color-secondary: #65676b;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* SELECTION */
+*::selection {
+  background: rgba(6, 125, 247, 0.15);
+}
+
+pre::selection,
+code::selection {
+  background: #09f;
+  text-shadow: none;
+  opacity: 0.3;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  color: #1c1e21;
+}
